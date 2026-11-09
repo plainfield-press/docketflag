@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DocketFlag - Court filing alerts for solo attorneys</title>
+<meta name="description" content="DocketFlag watches federal court dockets and flags new filings on your cases the day they post. $29/month.">
+<style>
+:root{--ink:#191510;--paper:#fdfcf9;--flag:#a31621;--line:#ddd6c8;--mute:#6f675c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--paper);color:var(--ink);line-height:1.7}
+.wrap{max-width:820px;margin:0 auto;padding:0 1.25rem}
+header{border-bottom:3px double var(--ink);padding:1.2rem 0}
+header .wrap{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.4rem}
+.logo{font-size:1.45rem;font-weight:700;letter-spacing:.02em}
+.logo em{font-style:normal;color:var(--flag)}
+header .sub{font-variant:small-caps;letter-spacing:.1em;font-size:.85rem;color:var(--mute)}
+.hero{padding:3rem 0 2rem;border-bottom:1px solid var(--line)}
+h1{font-size:2.15rem;line-height:1.25;max-width:24ch}
+.hero p{margin-top:1rem;max-width:60ch;font-size:1.05rem;color:#3d3830}
+h2{font-variant:small-caps;letter-spacing:.12em;font-size:1.05rem;border-bottom:1px solid var(--ink);display:inline-block;padding-bottom:.15rem;margin:2.6rem 0 1.1rem}
+ol.how{margin-left:1.3rem;max-width:62ch}
+ol.how li{margin-bottom:.9rem;padding-left:.3rem}
+ol.how b{color:var(--flag)}
+.sample{border:1px solid var(--line);background:#fff;padding:1.3rem;box-shadow:3px 3px 0 var(--line)}
+.sample .lbl{font-variant:small-caps;letter-spacing:.12em;font-size:.75rem;color:var(--mute);margin-bottom:.8rem}
+.entry{border-left:3px solid var(--flag);padding:.4rem .9rem;margin-bottom:1rem}
+.entry .case{font-family:Consolas,monospace;font-size:.82rem;color:var(--mute)}
+.entry b{color:var(--flag)}
+.cta{border-top:3px double var(--ink);margin-top:3rem;padding:2.2rem 0;text-align:center}
+.price{font-size:2.3rem}
+.price small{font-size:1rem;color:var(--mute)}
+button.buy{display:inline-block;margin-top:1rem;background:var(--flag);color:#fff;border:0;font-family:inherit;font-size:1.05rem;padding:.85rem 2.2rem;cursor:pointer;letter-spacing:.03em}
+button.buy:hover{background:#7f1119}
+.cta .fine{margin-top:.8rem;font-size:.85rem;color:var(--mute)}
+footer{padding:1.6rem 0 2.6rem;font-size:.82rem;color:var(--mute);font-style:italic}
+.modal{display:none;position:fixed;inset:0;background:rgba(25,21,16,.6);align-items:center;justify-content:center;padding:1rem}
+.modal.open{display:flex}
+.card{background:var(--paper);max-width:460px;padding:2rem;border:1px solid var(--ink);box-shadow:5px 5px 0 var(--line)}
+.card h3{margin-bottom:.7rem}
+.card p{margin-bottom:.9rem;font-size:.95rem}
+.card a.mail{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:.7rem 1.4rem}
+.card .dismiss{display:block;margin-top:1rem;font-size:.85rem;color:var(--mute);cursor:pointer;text-decoration:underline;background:none;border:0;font-family:inherit}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="logo">Docket<em>Flag</em></div>
+<div class="sub">Docket watch for solo &amp; small-firm attorneys</div>
+</div></header>
+
+<div class="wrap">
+<section class="hero">
+<h1>The filing you're waiting for posts at 4:47 PM. You find out tomorrow.</h1>
+<p>Opposing counsel files, judges issue orders, deadlines start running - and the only way to know is to keep checking the docket. DocketFlag checks it for you, several times a day, and sends a sourced flag the day anything new posts on the cases you name.</p>
+</section>
+
+<h2>How it works</h2>
+<ol class="how">
+<li><b>Name the matter.</b> A case number, a party name, or an opposing attorney. Federal courts today; tell us if you need a state system and we'll tell you honestly whether we can watch it.</li>
+<li><b>We pull the docket, repeatedly.</b> Several times a day, every day. Not a weekly digest, not a monthly sweep.</li>
+<li><b>You get the flag.</b> Document number, what was filed, who filed it, the date, and the link to the docket so you can pull the document yourself.</li>
+</ol>
+
+<h2>What a flag looks like <span style="font-size:.7rem;letter-spacing:.1em">(ILLUSTRATIVE SAMPLE)</span></h2>
+<div class="sample">
+<div class="lbl">Sample flags - format preview, not a real case</div>
+<div class="entry"><b>NEW FILING - Doc. 47: Motion for Summary Judgment</b><br>Filed by counsel for Example Corp. Response due dates now apply.<br><span class="case">Sample v. Example Corp., 1:26-cv-00000 (S.D.N.Y.) - flagged today</span></div>
+<div class="entry"><b>ORDER - Doc. 48: Discovery conference set</b><br>The court set a status conference. Date and time in the order.<br><span class="case">Sample v. Example Corp., 1:26-cv-00000 (S.D.N.Y.) - flagged today</span></div>
+</div>
+
+<h2>What it costs</h2>
+<div class="cta">
+<div class="price">$29<small>/month</small></div>
+<div>Up to 10 watched matters. Flags the day a filing posts. Cancel anytime.</div>
+<button class="buy" id="buyBtn">Watch my dockets - $29/mo</button>
+<div class="fine">We watch public dockets. You pull and file the documents - nothing here is legal advice.</div>
+</div>
+
+<footer>DocketFlag is a monitoring service for attorneys, not a law firm. Flags point to public docket entries; always confirm against the official docket before relying on a date. DocketFlag is a Plainfield Press project.</footer>
+</div>
+
+<div class="modal" id="modal"><div class="card">
+<h3>We're not taking payment yet</h3>
+<p>DocketFlag is in its final pre-launch check. Purchases open soon - join the early-access list and you'll get a code for your first month when we open.</p>
+<p>Nothing is charged on this page.</p>
+<a class="mail" id="waitLink" href="mailto:mfcyxd@mail.instinct.com?subject=DocketFlag%20early%20access">Join the early-access list</a>
+<button class="dismiss" id="dismiss">Back to the page</button>
+</div></div>
+
+<script data-goatcounter="https://docketflag.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+var m=document.getElementById('modal');
+document.getElementById('buyBtn').addEventListener('click',function(){
+  if(window.goatcounter&&window.goatcounter.count){window.goatcounter.count({path:'buy-intent',title:'Buy intent',event:true});}
+  m.classList.add('open');
+});
+document.getElementById('waitLink').addEventListener('click',function(){
+  if(window.goatcounter&&window.goatcounter.count){window.goatcounter.count({path:'waitlist-click',title:'Waitlist click',event:true});}
+});
+document.getElementById('dismiss').addEventListener('click',function(){m.classList.remove('open');});
+</script>
+</body>
+          </html>
